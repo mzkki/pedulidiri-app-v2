@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+
+body {
+    background-color: #f1eee9;
+    font-family: "Comic Neue", sans-serif;
+}
+.container {
+    margin-top: 100px;
+}
+
+.nav-first {
+    padding-left: 0;
+}
+.nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    color: black;
+}
+
+.main {
+    width: 100%;
+    padding: 10px;
+    border: solid black 1px;
+}
+
+.base-filter {
+    width: 100%;
+    border: solid black 1px;
+    padding: 10px;
+}
+
+.btn {
+    border: solid black 2px;
+    border-radius: 0;
+    box-shadow: 3px 5px;
+}
+
+.btn-filter {
+    border: solid black 2px;
+    box-shadow: 1px 2px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f1eee9;
+}
+
+.filter {
+    width: 150px;
+    border-radius: 0;
+    padding-left: 3px;
+    border: solid black 1px;
+    background-color: #f1eee9;
+}
+
+.header-main {
+    width: 100%;
+    padding: 10px;
+    border: solid black 1px;
+}
+table {
+    width: 100%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-color: collapse;
+}
+
+td,
+th {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    text-align: left;
+    padding: 6px;
+}
+
+th {
+    background-color: #dddddd;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.formel {
+    padding: 0;
+    border: 1px solid black;
+    width: 305px;
+    margin-left: 90px;
+    border-radius: 0;
+    background-color: #f1eee9;
+}
+
+.formel:focus {
+    background-color: #f1eee9;
+}
+
+.formlogin {
+    border-radius: 0;
+    border: 1px solid black;
+    width: 400px;
+    background-color: #f1eee9;
+}
+
+.formlogin:focus {
+    background-color: #f1eee9;
+}
+
+.btn-logout {
+    border: 0;
+    background-color: #f1eee9;
+}
+.btnedit {
+    text-decoration: none;
+    padding: 7px;
+    margin-right: 5px;
+}
+.btnedit:hover {
+    color: white;
+}

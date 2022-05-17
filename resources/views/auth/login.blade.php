@@ -2,6 +2,7 @@
 
 @section('auth')
 <div class="position-absolute top-50 start-50 translate-middle">
+    <h3 class="text-center mb-2">Login</h3>
     @if (session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         {{ session('success') }}

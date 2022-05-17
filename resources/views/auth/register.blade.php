@@ -2,6 +2,7 @@
 
 @section('auth')
 <div class="position-absolute top-50 start-50 translate-middle">
+    <h3 class="text-center">Register</h3>
     <form action="/register" method="POST">
         @csrf
         <div class="form-floating mb-3">

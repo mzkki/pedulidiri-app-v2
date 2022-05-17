@@ -20,13 +20,13 @@ Route::get('/home', function () {
     return view('user.home', [
         'title' => 'Page Home'
     ]);
-});
+})->middleware('auth');
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::resource('/history', HistoryController::class);
+Route::resource('/history', HistoryController::class)->middleware('auth');

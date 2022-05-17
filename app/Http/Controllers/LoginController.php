@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -12,8 +14,35 @@ class LoginController extends Controller
             'title' => 'Page Login'
         ]);
     }
-    public function authenticate()
+
+    public function authenticate(Request $request)
     {
-        return request()->all();
+        $request->validate([
+            'nik' => 'required|min:16|max:16',
+            'fullname' => 'required|string|max:255',
+        ]);
+
+        $nik = User::where('nik', $request->nik)->where('fullname', $request->fullname)->first();
+
+        if ($nik) {
+
+            Auth::login($nik);
+            $request->session()->regenerate();
+
+            return redirect()->intended('/home');
+        }
+
+        return back()->with('error', 'Login failed');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
     }
 }

@@ -14,10 +14,9 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        $histories = History::all();
         return view('user.history', [
             'title' => 'Page History',
-            'histories' => $histories
+            'histories' => History::where('user_id', auth()->user()->id)->latest()->get()
         ]);
     }
 

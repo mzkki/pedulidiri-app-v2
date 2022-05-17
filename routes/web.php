@@ -49,3 +49,9 @@ Route::get('/history', function () {
         'histories' => $histories
     ]);
 });
+
+Route::get('/history/create', function () {
+    return view('user.create', [
+        'title' => 'Page Create History'
+    ]);
+});

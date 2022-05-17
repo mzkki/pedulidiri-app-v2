@@ -20,7 +20,7 @@
         @endforeach
     </table>
     <div class="nav justify-content-end mt-3">
-        <a href="history/add" class="btn">Isi Catatan Perjalanan</a>
+        <a href="history/create" class="btn">Isi Catatan Perjalanan</a>
     </div>
 </div>
 @endsection

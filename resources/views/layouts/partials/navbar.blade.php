@@ -19,7 +19,7 @@
                 <nav class="nav">
                     <a class="nav-link nav-first" href="/home">Home</a> |
                     <a class="nav-link" href="/history">Catatan Perjalanan</a> |
-                    <a class="nav-link" href="#">Isi Data</a> |
+                    <a class="nav-link" href="/history/create">Isi Data</a> |
                     <form action="/logout" method="post">
                         @csrf
                         <button type="submit" class="nav-link btn-logout">Log Out</button>

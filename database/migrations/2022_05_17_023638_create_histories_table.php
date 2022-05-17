@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('histories', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('nik')->unique();
-            $table->string('fullname');
+            $table->foreignId('user_id');
+            $table->date('tanggal');
+            $table->time('waktu');
+            $table->string('lokasi');
+            $table->float('suhu');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('histories');
     }
 };

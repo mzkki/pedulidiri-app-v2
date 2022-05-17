@@ -32,7 +32,7 @@ class LoginController extends Controller
             return redirect()->intended('/home');
         }
 
-        return back()->with('error', 'Login failed');
+        return back()->with('loginError', 'Login Failed !');
     }
 
     public function logout(Request $request)

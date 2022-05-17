@@ -8,7 +8,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
-    <table>
+    <table class="admintable">
         <tr>
             <th>No.</th>
             <th>Nama</th>

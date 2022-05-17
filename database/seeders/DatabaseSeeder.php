@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'nik' => 6471040812040001,
             'fullname' => 'Haris Muzakki Indra',
+            'admin' => true,
         ]);
 
         User::create([

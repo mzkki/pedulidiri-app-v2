@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminUsersController;
+use App\Http\Controllers\AdminHistoriesController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -33,3 +35,8 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::resource('/history', HistoryController::class)->middleware('auth');
+
+//ADMIN
+Route::resource('/users', AdminUsersController::class)->middleware('admin');
+
+Route::resource('/histories', AdminHistoriesController::class)->middleware('admin');

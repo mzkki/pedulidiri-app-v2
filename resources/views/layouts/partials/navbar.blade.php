@@ -18,8 +18,12 @@
             <div class="link">
                 <nav class="nav">
                     <a class="nav-link nav-first" href="/home">Home</a> |
-                    <a class="nav-link" href="/history">Catatan Perjalanan</a> |
-                    <a class="nav-link" href="/history/create">Isi Data</a> |
+                    <a class="nav-link" href="{{ route('history.index') }}">Catatan Perjalanan</a> |
+                    <a class="nav-link" href="{{ route('history.create') }}">Isi Data</a> |
+                    @can('admin')
+                    <a class="nav-link" href="{{ route('histories.index') }}">Data Catatan</a> |
+                    <a class="nav-link" href="{{ route('users.index') }}">Data Pengguna</a> |
+                    @endcan
                     <form action="/logout" method="post">
                         @csrf
                         <button type="submit" class="nav-link btn-logout">Log Out</button>

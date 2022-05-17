@@ -28,7 +28,9 @@ class HistoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create', [
+            'title' => 'Page Create History'
+        ]);
     }
 
     /**

@@ -22,6 +22,6 @@
     <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 </body>
 <footer class="fixed-bottom text-center mb-2">
-    Made With &hearts; by Haris Muzakki Indra
+    &COPY; 2022 Peduli Diri made by <a href="https://instagram.com/harismzkki" class="text-decoration-none" style="color: black">Haris Muzakki</a>
 </footer>
 </html>

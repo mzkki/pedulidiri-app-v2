@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\History;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HistoryController extends Controller
@@ -27,8 +28,11 @@ class HistoryController extends Controller
      */
     public function create()
     {
+        $dt = Carbon::now()->timezone('Asia/Jakarta');
         return view('user.create', [
-            'title' => 'Page Create History'
+            'title' => 'Page Create History',
+            'tanggal' => $dt->format('Y-m-d'),
+            'waktu' => $dt->format('H:i:s')
         ]);
     }
 
@@ -40,7 +44,19 @@ class HistoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'tanggal' => 'required',
+            'waktu' => 'required',
+            'lokasi' => 'required',
+            'suhu' => 'required',
+        ];
+
+        $validatedData = $request->validate($rules);
+        $validatedData['user_id'] = auth()->user()->id;
+
+        History::Create($validatedData);
+
+        return redirect()->to('/history')->with('success', 'Data berhasil ditambahkan');
     }
 
     /**

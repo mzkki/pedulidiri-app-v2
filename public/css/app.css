@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
 
 body {
-    background-color: #f1eee9;
+    background-color: #eeeeee;
     font-family: "Comic Neue", sans-serif;
 }
 .container {
@@ -41,7 +41,7 @@ body {
     padding: 0;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #f1eee9;
+    background-color: #eeeeee;
 }
 
 .filter {
@@ -49,7 +49,7 @@ body {
     border-radius: 0;
     padding-left: 3px;
     border: solid black 1px;
-    background-color: #f1eee9;
+    background-color: #eeeeee;
 }
 
 .header-main {
@@ -86,27 +86,27 @@ tr:nth-child(even) {
     width: 305px;
     margin-left: 90px;
     border-radius: 0;
-    background-color: #f1eee9;
+    background-color: #eeeeee;
 }
 
 .formel:focus {
-    background-color: #f1eee9;
+    background-color: #eeeeee;
 }
 
 .formlogin {
     border-radius: 0;
     border: 1px solid black;
     width: 400px;
-    background-color: #f1eee9;
+    background-color: #eeeeee;
 }
 
 .formlogin:focus {
-    background-color: #f1eee9;
+    background-color: #eeeeee;
 }
 
 .btn-logout {
     border: 0;
-    background-color: #f1eee9;
+    background-color: #eeeeee;
 }
 .btnedit {
     text-decoration: none;

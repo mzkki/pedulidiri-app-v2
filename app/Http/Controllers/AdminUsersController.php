@@ -15,9 +15,11 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
+        $users = User::latest()->paginate(5);
         return view('admin.user.index', [
             'title' => 'Page Users',
-            'users' => User::latest()->paginate(5)
+            'users' => $users,
+            'skipped' => ($users->currentPage() * $users->perPage()) - $users->perPage(),
         ]);
     }
 

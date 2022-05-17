@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        User::factory(7)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -38,6 +38,15 @@ class DatabaseSeeder extends Seeder
             'fullname' => 'Muhammad Selli'
         ]);
 
+        History::factory(10)->create();
+
+        History::create([
+            'user_id' => 1,
+            'tanggal' => '2021-09-13',
+            'waktu' => '12:05:30',
+            'lokasi' => 'Kampung Halaman',
+            'suhu' => '36.4'
+        ]);
         History::create([
             'user_id' => 1,
             'tanggal' => '2021-09-13',

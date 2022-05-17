@@ -17,7 +17,7 @@
         </tr>
         @foreach ($users as $user)
         <tr>
-            <td>{{ $loop->iteration }}</td>
+            <td>{{ $loop->iteration + $skipped }}</td>
             <td>{{ $user->nik }}</td>
             <td>{{ $user->fullname }}</td>
             <td>
@@ -34,7 +34,7 @@
         @endforeach
     </table>
     <div class="mt-3">
-        {{ $histories->links() }}
+        {{ $users->links() }}
     </div>
 </div>
     

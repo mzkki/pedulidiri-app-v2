@@ -41,35 +41,35 @@ class DatabaseSeeder extends Seeder
         History::factory(10)->create();
 
         History::create([
-            'user_id' => 1,
+            'user_id' => 8,
             'tanggal' => '2021-09-13',
             'waktu' => '12:05:30',
             'lokasi' => 'Kampung Halaman',
             'suhu' => '36.4'
         ]);
         History::create([
-            'user_id' => 1,
+            'user_id' => 8,
             'tanggal' => '2021-09-13',
             'waktu' => '08:00',
             'lokasi' => 'Toko Buku Hangat',
             'suhu' => '36.2'
         ]);
         History::create([
-            'user_id' => 3,
+            'user_id' => 10,
             'tanggal' => '2021-09-13',
             'waktu' => '10:00',
             'lokasi' => 'Bulan Dept Store',
             'suhu' => '36.2'
         ]);
         History::create([
-            'user_id' => 1,
+            'user_id' => 9,
             'tanggal' => '2021-09-16',
             'waktu' => '15:00',
             'lokasi' => 'Pagi Jogging Area',
             'suhu' => '37.0'
         ]);
         History::create([
-            'user_id' => 2,
+            'user_id' => 9,
             'tanggal' => '2021-09-14',
             'waktu' => '11:00',
             'lokasi' => 'Kelapa Gading',

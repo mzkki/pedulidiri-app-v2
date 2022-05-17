@@ -18,7 +18,8 @@
     <form action="/login" method="POST">
         @csrf
         <div class="form-floating mb-3">
-            <input type="number" class="form-control @error('nik') is-invalid @enderror formlogin" id="floatingInput" placeholder="28282828" name="nik">
+            <input type="number" class="form-control @error('nik') is-invalid @enderror formlogin" id="floatingInput" placeholder="28282828" maxlength="16" name="nik" 
+            oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, maxLength);">
             <label for="floatingInput">NIK</label>
             @error('nik')
             <div class="invalid-feedback">

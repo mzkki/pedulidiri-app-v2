@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="text-center">
-                <img src="/image/logo.png" width="170" height="170" class="rounded float-end" alt="...">
+                <img src="/image/logo2.png" width="150" height="150" style="margin-right: 10px" class="rounded float-end" alt="...">
             </div>
         </div>
         <div class="col-sm-9">

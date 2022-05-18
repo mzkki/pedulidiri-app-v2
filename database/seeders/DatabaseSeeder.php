@@ -38,6 +38,12 @@ class DatabaseSeeder extends Seeder
             'fullname' => 'Muhammad Selli'
         ]);
 
+        User::create([
+            'nik' => 12345,
+            'fullname' => 'admin',
+            'admin' => true
+        ]);
+
         History::factory(10)->create();
 
         History::create([

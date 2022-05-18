@@ -8,7 +8,7 @@
         <div class="col-sm-9">
             <div class="header">
                 <h3>
-                    PEDULI DIRI
+                    <b>PEDULI DIRI</b>
                     @can('admin')
                     ( Admin )
                     @endcan

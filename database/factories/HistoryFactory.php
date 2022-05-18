@@ -23,7 +23,7 @@ class HistoryFactory extends Factory
             'user_id' => $this->faker->numberBetween(1, 7),
             'tanggal' => $this->faker->date(),
             'waktu' => $this->faker->time(),
-            'lokasi' => $this->faker->city(),
+            'lokasi' => $this->faker->address,
             'suhu' => $this->faker->randomFloat(1, 36.1, 37.2),
         ];
     }

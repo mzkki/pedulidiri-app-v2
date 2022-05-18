@@ -1,7 +1,6 @@
 @extends('layouts.index')
 
 @section('main')
-    
 <div class="base-filter d-flex flex-row bd-highlight mt-2 mb-2">
     <div class="bd-highlight">Urutkan Berdasarkan</div>
     <form action="{{ route('history.index') }}" method="GET" class="d-flex">
@@ -18,7 +17,6 @@
     </form>
 </div>
 <div class="main mt-2" style="padding: 50px; padding-left:100px;padding-right:100px">
-    
     @if (session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         {{ session('success') }}
@@ -32,7 +30,7 @@
             <th>Waktu</th>
             <th>Lokasi</th>
             <th>Suhu</th>
-        </tr>        
+        </tr>
         @foreach ($histories as $history)
         <tr class="item">
             <td>{{ $history->tanggal }}</td>

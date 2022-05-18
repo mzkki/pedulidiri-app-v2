@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\History;
+use App\Models\User;
 
 class AdminHistoriesController extends Controller
 {
@@ -16,7 +17,8 @@ class AdminHistoriesController extends Controller
     {
         return view('admin.history.index', [
             'title' => 'Page History',
-            'histories' => History::latest()->paginate(5)
+            'histories' => History::latest()->filter(request(['filter']))->paginate(5)->withQueryString(),
+            'users' => User::all()
         ]);
     }
 

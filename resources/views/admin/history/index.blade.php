@@ -1,6 +1,22 @@
 @extends('layouts.index')
 
 @section('main')
+<div class="base-filter d-flex flex-row bd-highlight mt-2 mb-2">
+    <div class="bd-highlight">Urutkan Berdasarkan</div>
+    <form action="{{ route('histories.index') }}" method="GET" class="d-flex">
+        <div class="mx-2 bd-highlight">
+            <select name="filter" id="filter" class="filter">
+                <option selected>Pilih User</option>
+                @foreach ($users as $user)
+                <option value="{{ $user->id }}">{{ $user->fullname }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="nav justify-content-end bd-highlight">
+            <button class="btn-filter" type="submit">Urutkan</button>
+        </div>
+    </form>
+</div>
 <div class="main mt-2" style="padding: 50px;">
     @if (session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -46,5 +62,5 @@
         {{ $histories->links() }}
     </div>
 </div>
-    
+
 @endsection

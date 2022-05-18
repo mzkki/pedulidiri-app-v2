@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-3">
-            {{-- <div class="text-center"> --}}
-            <img src="https://source.unsplash.com/150x150" class="rounded float-end" alt="...">
-            {{-- </div> --}}
+            <div class="text-center">
+                <img src="/image/logo.png" width="170" height="170" class="rounded float-end" alt="...">
+            </div>
         </div>
         <div class="col-sm-9">
             <div class="header">

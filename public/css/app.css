@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
 
+:root {
+    --bgcolor: #eeeeee;
+    --grey: #dddddd;
+}
+
 body {
-    background-color: #eeeeee;
+    background-color: var(--bgcolor);
     font-family: "Comic Neue", sans-serif;
 }
 .container {
@@ -41,7 +46,7 @@ body {
     padding: 0;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #eeeeee;
+    background-color: var(--bgcolor);
 }
 
 .filter {
@@ -49,7 +54,7 @@ body {
     border-radius: 0;
     padding-left: 3px;
     border: solid black 1px;
-    background-color: #eeeeee;
+    background-color: var(--bgcolor);
 }
 
 .header-main {
@@ -74,11 +79,11 @@ th {
 
 .usertable tr:nth-child(even),
 .usertable th {
-    background-color: #dddddd;
+    background-color: var(--grey);
 }
 
 .admintable tr:nth-child(odd) {
-    background-color: #dddddd;
+    background-color: var(--grey);
 }
 
 .formel {
@@ -87,27 +92,27 @@ th {
     width: 305px;
     margin-left: 90px;
     border-radius: 0;
-    background-color: #eeeeee;
+    background-color: var(--bgcolor);
 }
 
 .formel:focus {
-    background-color: #eeeeee;
+    background-color: var(--bgcolor);
 }
 
 .formlogin {
     border-radius: 0;
     border: 1px solid black;
     width: 400px;
-    background-color: #eeeeee;
+    background-color: var(--bgcolor);
 }
 
 .formlogin:focus {
-    background-color: #eeeeee;
+    background-color: var(--bgcolor);
 }
 
 .btn-logout {
     border: 0;
-    background-color: #eeeeee;
+    background-color: var(--bgcolor);
 }
 .btnedit {
     text-decoration: none;
@@ -115,5 +120,5 @@ th {
     margin-right: 5px;
 }
 .btnedit:hover {
-    color: white;
+    color: bgcolor;
 }

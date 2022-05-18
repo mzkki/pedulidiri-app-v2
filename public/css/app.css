@@ -72,7 +72,8 @@ th {
     padding: 6px;
 }
 
-.usertable tr:nth-child(even) {
+.usertable tr:nth-child(even),
+.usertable th {
     background-color: #dddddd;
 }
 

@@ -15,6 +15,11 @@
         <div class="nav justify-content-end bd-highlight">
             <button class="btn-filter" type="submit">Urutkan</button>
         </div>
+        @if(request('filter'))
+        <div class="nav justify-content-end bd-highlight">
+            <a href="{{ route('histories.index') }}" class="btn-filter text-decoration-none mx-2" style="color: black">Reset Filter</a>
+        </div>
+        @endif
     </form>
 </div>
 <div class="main mt-2" style="padding: 50px;">

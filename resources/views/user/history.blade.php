@@ -24,7 +24,7 @@
     </div>
     @endif
     @if ($histories->count())
-    <table class="sortable">
+    <table class="sortable usertable">
         <tr>
             <th>Tanggal</th>
             <th>Waktu</th>

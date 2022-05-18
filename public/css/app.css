@@ -8,6 +8,7 @@
 body {
     background-color: var(--bgcolor);
     font-family: "Comic Neue", sans-serif;
+    margin-bottom: 100px;
 }
 .container {
     margin-top: 100px;
